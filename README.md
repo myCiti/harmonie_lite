@@ -1,3 +1,3 @@
 # Harmonie Lite
 
-Lite version of Harmonie - ells and whistles - just core program
+Lite version of Harmonie - no bells and whistles - just core program

@@ -1,2 +1,3 @@
-# harmonie_lite
-Lite version of Harmonie
+# Harmonie Lite
+
+Lite version of Harmonie - ells and whistles - just core program

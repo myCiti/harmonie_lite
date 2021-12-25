@@ -13,8 +13,8 @@ TIMERS = OrderedDict(
 
 ### input/output pins
 iPins = {
-    'Open'      : 22,
-    'Close'     : 21,
+    'Open'      : 4,
+    'Close'     : 5,
     'Stop'      : 6,
     'OpenLmt'   : 3, 
     'CloseLmt'  : 2,
@@ -29,7 +29,7 @@ oPins = {
 Input = dict((name, Pin(pin, Pin.IN, Pin.PULL_DOWN)) for (name, pin) in iPins.items())
 Output = dict((name, Pin(pin, Pin.OUT, Pin.PULL_DOWN)) for (name, pin) in oPins.items())
 
-i2c = I2C(0, sda=Pin(4), scl=Pin(5), freq=400_000)
+i2c = I2C(0, sda=Pin(0), scl=Pin(1), freq=400_000)
 lcd = I2cLcd(i2c, 0x27, 4, 20)
 
 ### Global variables

@@ -187,7 +187,7 @@ class LcdApi:
     def write_line_center(self, string, line):
         """Write sting to center of lcd, at specified line."""
         space = ((self.num_columns - len(string)) // 2)
-        self.write_line(' '*space + string + ' '*space, line)
+        self.write_line(' '*space + string + ' '*(space + 1 if len(string) % 2 == 1 else 0), line)
     
     def clear_line(self, line):
         """Clear one specific line"""

@@ -47,6 +47,10 @@ def readPin(pin, n_times=n_reads):
         time.sleep_us(readpin_delay)
     
     if counter == n_times:
+        if pin == 'Stop':
+            Output[pin].high()
+            time.sleep_ms(writepin_delay)
+            Output[pin].low()
         return True
     
     return False
